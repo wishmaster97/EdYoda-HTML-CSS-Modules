@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title> EDYODA Stories </title>
+
+    <style>
+
+      body{
+          background-color: rgb(208, 232, 240);
+          font-family: "Raleway", sans-serif;
+      } 
+
+      #topbar{
+
+          width: 100%;
+          position: fixed;
+          background-color: white;
+          padding: 16px 50px;
+          margin:0 ;
+          left: 0;
+          top: 0;
+          position: fixed ;
+      }
+
+      #sub-text{
+
+          font-size: 1.3em;
+          font-weight: 500;
+          font-style: italic;
+          color: black;
+          margin: 0;
+
+      }
+
+      #logo{
+
+          color: #0048ff;
+          font-weight: 900;
+          font-size: 32px;
+          margin: 0;
+      }
+
+      .topbar-item{
+          display: inline-block;
+          align-items: center;
+            
+      }
+
+      #menu-item{
+
+          padding-left: 150px;
+          position: 15;
+          
+      }
+
+      #menu-item:hover{
+
+          cursor: pointer;
+          color: grey
+      }
+
+      #main-container{
+
+          width: 100%;
+          max-width: 990px;
+          margin: 2% auto;
+          margin-top: 10%;
+
+      } 
+
+      #categories-section {
+
+          width: 100%;
+          max-width: 990px;
+          margin: 2% auto;
+
+      }
+
+      .item_btn{
+
+          color: #0084ff;
+          border: 1px solid #0084ff;
+          border-radius: 30px;
+          padding: 6px 14px;
+          display: inline-block;
+          margin:5px;
+          background-color: rgb(208, 232, 240);
+      }
+
+      .item_btnSel{
+
+          background-color: #0084ff;
+          color: white;
+          border: 1px solid #0084ff;
+          border-radius: 30px;
+          padding: 6px 14px;
+          display: inline-block;
+          margin:5px;
+      }
+
+
+      #blog-grid{
+
+          max-width: 100%;
+          max-width: 990px;
+          margin: 2% auto;
+
+
+      }
+
+      .blog-card{
+
+           vertical-align: top;
+          display: inline-block;
+          width: calc(33% - 33px);
+          background-color: white;
+          margin: 8px;
+          border-radius: 5px;
+          border:  solid rgba(0,168,255,.3);
+          box-shadow: 0 5px 20px 0 rgba(0,0,0,.1);
+    
+      }
+
+      .thumbnail{
+
+          width: 100%;
+          height: 174px;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+
+      }
+
+      .blog-meta{
+
+          padding: 16px;
+      }
+
+      .blog-title{
+
+          font-size: 20;
+          font-weight: 600;
+          margin: 0;
+          max-height: 50px;
+          overflow: hidden;
+
+      }
+
+      .channel-name{
+
+          color: #0096ff;
+          font-weight: 500;
+          font-size: 14.4px;
+
+      }
+
+      .date{
+
+          font-size: 14px;
+          font-weight: 300;
+          font-family: "roboto", sans-serif;
+      }
+
+      .description{
+
+        height: 96px;
+        color: rgba(0,0,0,.5);
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0;
+        overflow: hidden;
+      }
+
+    </style>
+</head>
+    <body>
+
+        <div id="topbar">
+            <div class="topbar-item">
+
+                <p id="logo">EDYODA</p>
+                <p id="sub-text">Stories</p>
+
+            </div>
+            <div class="topbar-item">
+
+                <p id="menu-item">Explore Categories<img src="C:\Users\wish_\Desktop\React Tech\React 240720\down-arrow.svg" alt="down-arrow" height="12px" width="18px" style="padding-left: 5px;"/></p>
+
+            </div>
+
+        </div>
+
+        <div id="main-container">
+            <p><h2>Trending Posts</h2></p>
+            <p><img src="C:\Users\wish_\Desktop\React Tech\React 240720\filter.png" alt="filter" height="15px" width="20px" style="padding-left: 5px;"/>Filter by Category</p>
+        </div>
+
+
+        <div id="categories-section">
+                    <input type="button" value="All" class="item_btnSel">
+                    <input type="button" value="Artificial Inteligence" class="item_btn">
+                    <input type="button" value="Cloyd Computing" class="item_btn">
+                    <input type="button" value="DevOps" class="item_btn">
+                    <input type="button" value="Programming Languages" class="item_btn">
+                    <input type="button" value="Mobile Application Development" class="item_btn">
+                    <input type="button" value="Technology and Tools" class="item_btn">
+                    <input type="button" value="Get a Job in Tech Company" class="item_btn">
+                    <input type="button" value="Others" class="item_btn">
+
+        </div>
+        
+        <div id="blog-grid">
+            <div class="blog-card">
+                <img class="thumbnail" src="https://edyoda.s3.amazonaws.com/media/blog-images/learn_machine_learning_courses_online.png" alt="Intoduction to Machine Learning"/>
+
+                <div class="blog-meta">
+
+                    <h3 class="blog-title"> Intoduction To A Machine Learning Online Course</h3>
+                    <p>
+                        <span class="channel-name"> EdYoda  </span> | <span class="date"> 23 Aug 2019</span>     
+                    </p>
+                    <p class ="description">
+                        We have had an insight into Artificial Intelligence. 
+                        Well, one of its subfields is machine learning and this introduction 
+                        will help you get a fair idea of what a machine learning online course holds....
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="blog-card">
+                <img class="thumbnail" src="https://edyoda.s3.amazonaws.com/media/blog-images/6.png"/>
+
+                <div class="blog-meta">
+
+                    <h3 class="blog-title">LAMP Stack Vs MEAN stack...</h3>
+                    <p>
+                        <span class="channel-name"> EdYoda  </span> | <span class="date"> 24 Aug 2019</span>     
+                    </p>
+                    <p class ="description">
+                        
+                        In today’s dynamic world, rapid web application development with a smooth user interface that can adapt to specific features is the main business requirement...
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="blog-card">
+                <img class="thumbnail" src="https://edyoda.s3.amazonaws.com/media/blog-images/4.png" alt="Intoduction to Machine Learning"/>
+
+                <div class="blog-meta">
+
+                    <h3 class="blog-title"> Impact of Cloud Computing in various industries</h3>
+                    <p>
+                        <span class="channel-name"> EdYoda  </span> | <span class="date"> 24 Aug 2019</span>     
+                    </p>
+                    <p class ="description">
+                        Cloud computing has been rapidly gaining pace in the world of information technology. It has been observed that over 90% of global enterprises are using cloud technology as part of their business....
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="blog-card">
+                <img class="thumbnail" src="https://edyoda.s3.amazonaws.com/media/blog-images/3.png" alt="Intoduction to Machine Learning"/>
+
+                <div class="blog-meta">
+
+                    <h3 class="blog-title"> Big Data: Importance of Big Data Management...</h3>
+                    <p>
+                        <span class="channel-name"> EdYoda  </span> | <span class="date"> 23 Jul 2019</span>     
+                    </p>
+                    <p class ="description">
+                       
+                        Big data is the phrase that is used to define large structured and unstructured volumes of data that has the potential to be mined for information and used in machine learning projects and other advanced analytics applications....
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="blog-card">
+                <img class="thumbnail" src="https://edyoda.s3.amazonaws.com/media/blog-images/5.png" alt="Intoduction to Machine Learning"/>
+
+                <div class="blog-meta">
+
+                    <h3 class="blog-title"> Breaking the Myths around Cybersecurity</h3>
+                    <p>
+                        <span class="channel-name"> Edyoda  </span> | <span class="date"> 26 Aug 2019</span>     
+                    </p>
+                    <p class ="description">
+                        As the dependency on online platforms is increasing daily, cybersecurity is becoming an important concern for all companies today. The number of cyberattacks is ever-rising even after adopting every security measure possible by businesses....
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="blog-card">
+                <img class="thumbnail" src="https://edyoda.s3.amazonaws.com/media/blog-images/7.png" alt="Intoduction to Machine Learning"/>
+
+                <div class="blog-meta">
+
+                    <h3 class="blog-title"> Importance of Data Backup and Recovery...</h3>
+                    <p>
+                        <span class="channel-name"> EdYoda  </span> | <span class="date"> 26 Aug 2019</span>     
+                    </p>
+                    <p class ="description">
+                        A business must always introspect the areas where they lack in order to bring about a positive change in the work environment. One of the main precautions or a contingency....
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="blog-card">
+                <img class="thumbnail" src="https://edyoda.s3.amazonaws.com/media/blog-images/automation-testing-an-overview-2.png" alt="Intoduction to Machine Learning"/>
+
+                <div class="blog-meta">
+
+                    <h3 class="blog-title"> What is Web Scraping?</h3>
+                    <p>
+                        <span class="channel-name"> Zac Clancy  </span> | <span class="date"> 25 Sep 2019</span>     
+                    </p>
+                    <p class ="description">
+                        Simply put, web scraping is one of the tools developers use to gather and analyze information from the Internet.
+
+Some websites and platforms offer application programming interfaces (APIs)....
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="blog-card">
+                <img class="thumbnail" src="https://edyoda.s3.amazonaws.com/media/blog-images/what_is_isa_blog_1.png" alt="Intoduction to Machine Learning"/>
+
+                <div class="blog-meta">
+
+                    <h3 class="blog-title"> What is Income Share Agreement?</h3>
+                    <p>
+                        <span class="channel-name"> Zac Clancy  </span> | <span class="date"> 14 Oct 2019</span>     
+                    </p>
+                    <p class ="description">
+                        The term Income Share Agreement has been around for a long time since 1955 to be precise. Surprised, eh? It was first introduced by Milton Friedman, an American economist, and statistician who strongly believed in “free-market capitalism”....
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="blog-card">
+                <img class="thumbnail" src="https://edyoda.s3.amazonaws.com/media/blog-images/practical_machine_learning_1.png" alt="Intoduction to Machine Learning"/>
+
+                <div class="blog-meta">
+
+                    <h3 class="blog-title">Practical Machine Learning with Python and Keras</h3>
+                    <p>
+                        <span class="channel-name"> Edyoda  </span> | <span class="date"> 16 Oct 2019</span>     
+                    </p>
+                    <p class ="description">
+                        Machine learning is a field of artificial intelligence that uses statistical techniques to give computer systems the ability to “learn” (e.g., progressively improve performance on a specific task) from data, ...
+                    </p>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </body>
+
+</html>
