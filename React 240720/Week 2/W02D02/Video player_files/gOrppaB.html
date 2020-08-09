@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://cdpn.io/Wish_Master/fullpage/gOrppaB -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+<title>CodePen - Video player</title>
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #54c3ef;
+}
+
+#main-heading {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 90px;
+    text-align: center;
+    color: #fad744;
+    text-shadow: 2px 5px #2b3252;
+    margin: 0;
+}
+
+#main-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 4% 16%;
+    box-sizing: border-box;
+}
+
+#back-to-homepage {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    color: #fff748;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+#player-section {
+    width: 100%;
+    background-color: white;
+    border-radius: 6px;
+    padding: 16px;
+    box-sizing: border-box;
+    margin-top: 36px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#player-wrapper {
+    width: 70%;
+    padding-right: 16px;
+    border-right: 1px solid #ccc;
+}
+
+#player-wrapper iframe {
+    width: 100%;
+    height: 400px;
+}
+
+#video-title {
+    font-size: 36px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-top: 1px solid #ccc;
+    padding-top: 16px;
+}
+
+#video-description {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    margin-top: 0;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#video-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#video-actions p {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+    margin-top: 16px;
+}
+
+#video-actions i {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.7);
+    margin-right: 20px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+#playlist-wrapper {
+    width: 30%;
+    margin-left: 16px;
+}
+
+.playlist-card {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.active-card {
+    border: 4px solid #fad744;
+}
+
+.thumbnail {
+    display: block;
+    width: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    cursor: pointer;
+}
+
+.video-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    padding: 16px;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<title>The Video Player</title>
+<link href="./css" rel="stylesheet">
+<script src="./35c398e458.js.download" crossorigin="anonymous"></script><link rel="stylesheet" href="./free-v4-shims.min.css" media="all"><link rel="stylesheet" href="./free.min.css" media="all">
+<script src="./jquery-3.4.1.min.js.download" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<main>
+<div id="main-container">
+<a id="back-to-homepage" href="https://cdpn.io/Wish_Master/index.html">Back to Home</a>
+<h1 id="main-heading">The Video Player</h1>
+<div id="player-section">
+<div id="player-wrapper">
+<iframe id="video-player" src="./190062231.html" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+<div>
+<div id="video-actions">
+<p><span id="views-count">98.4k</span> views</p>
+ <div>
+<i class="far fa-heart" aria-hidden="true"></i>
+<i class="far fa-comment-alt" aria-hidden="true"></i>
+<i class="far fa-bookmark" aria-hidden="true"></i>
+</div>
+</div>
+<h3 id="video-title">Croissants | Flour and Stone</h3>
+<p id="video-description">There is no other way but to commit wholeheartedly to a relationship with a croissant. We have all found ourselves at the mercy of its allure. Here, in another epic film by the uber talented Nathan Rodger, our Erin divulges her personal romance with The Croissant.</p>
+</div>
+</div>
+<div id="playlist-wrapper"><div id="card1" class="playlist-card active-card"><img class="thumbnail" src="./600595198_390x220.webp"><h3>Croissants | Flour and Stone</h3></div><div id="card2" class="playlist-card"><img class="thumbnail" src="./604150056_390x220.webp"><h3>Perfect Mashed Potatoes and Gravy</h3></div><div id="card3" class="playlist-card"><img class="thumbnail" src="./726986673_390x220.webp"><h3>The Heart of Soba</h3></div><div id="card4" class="playlist-card"><img class="thumbnail" src="./570486309_390x220.webp"><h3>Grilled Cheese 9 Ways</h3></div><div id="card5" class="playlist-card"><img class="thumbnail" src="./602705517_390x220.webp"><h3>Pineapple Cheesecake</h3></div><div id="card6" class="playlist-card"><img class="thumbnail" src="./537261616_390x220.jpg"><h3>Lemony Chicken Noodle Soup</h3></div><div id="card7" class="playlist-card"><img class="thumbnail" src="./608805594_590x332.jpg"><h3>Pumpkin Roll</h3></div><div id="card8" class="playlist-card"><img class="thumbnail" src="./601730519_590x332.jpg"><h3>How to Brine a Turkey</h3></div><div id="card9" class="playlist-card"><img class="thumbnail" src="./456852083_590x332.jpg"><h3>Stop Motion Dry-Brined Turkey Recipe</h3></div><div id="card10" class="playlist-card"><img class="thumbnail" src="./600328152_590x332.jpg"><h3>Butternut Squash Ravioli</h3></div></div>
+</div>
+</div>
+</main>
+<script src="./stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js.download"></script>
+<script id="rendered-js">
+$(document).ready(function () {
+
+  const createThumbnails = (obj, pos) => {
+
+    let div = document.createElement('div');
+    div.id = "card" + obj.id;
+    div.className = 'playlist-card';
+
+    let img = document.createElement('img');
+    img.className = 'thumbnail';
+    img.src = obj.thumbnail;
+    div.appendChild(img);
+
+    if (pos === 0) {
+      div.classList.add('active-card');
+    }
+
+    div.onclick = () => {
+      updateVideoData(obj.id);
+      $('.playlist-card').removeClass('active-card');
+      div.classList.add('active-card');
+    };
+
+    let heading = document.createElement('h3');
+    heading.innerHTML = obj.title;
+    div.appendChild(heading);
+
+    return div;
+  };
+
+  $.get('https://5d76bf96515d1a0014085cf9.mockapi.io/playlist', data => {
+    data.map((item, pos) => {
+      $('#playlist-wrapper').append(createThumbnails(item, pos));
+    });
+
+  });
+
+  const updateVideoData = videoId => {
+    $.get(`https://5d76bf96515d1a0014085cf9.mockapi.io/video/${videoId}`, data => {
+      $('iframe').attr('src', `https://player.vimeo.com/video/${data.vimeoId}`);
+      $('#video-title').html(data.title);
+      $('#video-description').html(data.description);
+      $('#views-count').html(data.views);
+      $(window).scrollTop(0);
+    });
+  };
+
+});
+//# sourceURL=pen.js
+    </script>
+
+
+</body></html>
