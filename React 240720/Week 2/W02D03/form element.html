@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title> HTML FORM Element</title>
+
+    <style>
+        body{
+
+            background-color: lightblue;
+            margin: 10% 35%;
+        }
+
+        #registerForm{
+
+            background-color: white;
+            width: 300px;
+            padding: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+    <body>
+
+        <form id="registerForm">
+
+            <h1>Sign up</h1>
+
+            <div>
+            <p id="input-label">Full name : </p>  
+            <input type="text" name="full-name"/>
+
+            </div>
+            
+            
+            <div>
+                <p id="input-label">Email : </p>  
+            <input type="text" name="emailId"/>
+
+            </div>
+            
+            <div>
+                <p id="input-label">Password : </p>  
+            <input type="password" name="pass"/>
+
+            </div>
+            
+            <div>
+                <p id="input-label">Confirm Password : </p>  
+            <input type="password" name="passC"/>
+
+            </div>
+
+            <div>
+                <p id="input-label">Gender : </p>  
+            <input type="radio" name="gender" value="Male"/>Male
+            <input type="radio" name="gender" value="Female"/>Female
+            <input type="radio" name="gender" value="Other"/>Others
+
+            </div>
+
+            <div>
+              <br>
+                <p><label for="sq">Security Question:</label></p>
+                <select name="cars" id="cars">
+                  <option >What is your pet name?</option>
+                  <option >What is your nick name?</option>
+                  <option >Who is your best friend?</option>
+                  
+                </select> <br><br>
+                <textarea id="sqAns" name="sqAns" rows="4" cols="30"></textarea> 
+
+            </div>
+            <div>
+               <input type="checkbox" name="agreement" id="check1" value="check1">
+               <label for="check1">I agree to accept the terms and condition</label>
+
+            </div>
+
+            <div>
+                <br>
+                <input type="submit">
+            </div>
+            
+
+        </form>
+       
+    </body>
+
+</html>

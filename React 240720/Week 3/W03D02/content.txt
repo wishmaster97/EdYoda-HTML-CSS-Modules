@@ -1,0 +1,44 @@
+1. Will learn about Video Sections (cirrent week)
+2. CSS transitions (current week)
+
+3. Design daily 1 secction - vegan store (current week)
+
+
+4. discussed optgroup property of <select>
+
+<select>
+<optgroup>
+
+<option> </option>
+</optgroup>
+</select>
+
+5. For autocomplete fields - 
+<datalist>
+<option> </option>
+</datalist> 
+
+always link datlist to input field
+
+ex: input list="student"
+ 
+   datalist id="student"
+   
+   
+6. input type="color' - gives color picker input
+
+7. input type="date" - calendar
+
+8. input type="time" - time
+
+9. input type="file" - file selection
+
+10. dribble.com - UI design
+
+11. Position - fixed
+
+12. gradient 
+
+13. Combinators
+	- p + p
+	- p ~ p
