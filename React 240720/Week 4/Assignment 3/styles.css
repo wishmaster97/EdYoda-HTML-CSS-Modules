@@ -1,0 +1,78 @@
+body{
+
+    background-color: #ECF1F5;
+    box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+main{
+
+    margin: 5% auto;
+    
+    background-color: #FEFEFE;
+    border-radius: 15px;
+    Width: 90%;
+    Height:100vh;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    height: 20%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    align-self: flex-end;
+   
+}
+
+
+#menu-items a{
+
+    display: inline;
+    padding-left: 50px;
+
+
+
+}
+
+#logo{
+
+    width: 250px
+}
+
+#landing-img{
+
+    width: 700px
+    
+}
+
+#landing-section{
+
+    display: flex;
+
+
+
+}
+
+#left-section{
+    width:40%;
+    margin-left: 10%;
+   
+    background-color: lightgoldenrodyellow;
+}
+
+#p-1{
+
+    font-size:50px;
+    font-weight: 600;
+}
+
+#right-section{
+    width:60%;
+
+    margin-left:10%;
+    background-color: lightgreen;
+}
+
