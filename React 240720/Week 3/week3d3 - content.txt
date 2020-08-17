@@ -1,0 +1,8 @@
+1. calc(100% - 96)
+2. border-box
+
+1 = 2 for removing horizontal scrolling
+
+3. Position property
+  - absolute
+  

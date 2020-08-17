@@ -1,0 +1,5 @@
+https://cubic-bezier.com/#0,1,.64,.99
+
+<img class="concord-img vlv-creative" src="https://assets.nflxext.com/ffe/siteui/vlv3/63a8bbf4-b1ea-4adf-96e2-264486599178/96ab0af6-e5f5-4970-a1ed-6f0f4f97deea/IN-en-20200810-popsignuptwoweeks-perspective_alpha_website_small.jpg" srcset="https://assets.nflxext.com/ffe/siteui/vlv3/63a8bbf4-b1ea-4adf-96e2-264486599178/96ab0af6-e5f5-4970-a1ed-6f0f4f97deea/IN-en-20200810-popsignuptwoweeks-perspective_alpha_website_small.jpg 1000w, https://assets.nflxext.com/ffe/siteui/vlv3/63a8bbf4-b1ea-4adf-96e2-264486599178/96ab0af6-e5f5-4970-a1ed-6f0f4f97deea/IN-en-20200810-popsignuptwoweeks-perspective_alpha_website_medium.jpg 1500w, https://assets.nflxext.com/ffe/siteui/vlv3/63a8bbf4-b1ea-4adf-96e2-264486599178/96ab0af6-e5f5-4970-a1ed-6f0f4f97deea/IN-en-20200810-popsignuptwoweeks-perspective_alpha_website_large.jpg 1800w" alt="">
+
+https://assets.nflxext.com/ffe/siteui/vlv3/63a8bbf4-b1ea-4adf-96e2-264486599178/96ab0af6-e5f5-4970-a1ed-6f0f4f97deea/IN-en-20200810-popsignuptwoweeks-perspective_alpha_website_small.jpg
