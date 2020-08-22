@@ -45,11 +45,13 @@ nav a{
     text-decoration:none;
     color: grey;
     font-size: 15px;
+    
 }
 
 nav a:hover{
 
     color: black;
+   
 }
 
 #signIn-btn{
@@ -207,6 +209,11 @@ button{
     display: none;
 }
 
+i:hover{
+
+    cursor: pointer;
+}
+
 
 
 /*######################## Mobile Responsive ########################################*/
@@ -235,16 +242,18 @@ button{
     position: absolute;
     right: 75px;
     text-decoration:none;
-    color: grey;
+    cursor: pointer;
     font-size: 15px;
     background-color: white;
     box-shadow: 0 2px 5px #ccc;
     display: none;
+    
 }
 
 .mobile_menu_wrapper:hover > .dropdown{
 
     display: block;
+    cursor: pointer;
    
 }
 
