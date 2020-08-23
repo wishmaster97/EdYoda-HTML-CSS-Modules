@@ -31,16 +31,16 @@ body{
 
 #left-section{
 
-    /*background-color: chartreuse;*/
+    background-color: chartreuse;
     width: 75%;
     height: 100vh;
 }
 
 #header-section{
 
-    /*background-color: lightblue;*/
+    background-color: lightblue;
     width: 100%;
-    height: 16%;
+    height: 16vh;
     align-items: center;
     
 
@@ -105,9 +105,9 @@ body{
 
 #poster-section{
 
-      /*background-color: lightcoral;*/
+    background-color: lightcoral;
     width: 100%;
-    height: 28%;
+    height: 28vh;
     position: relative;
 
 
@@ -152,37 +152,27 @@ body{
     font-size: 10px;
 }
 
-#offer-label-div{
-
-padding-top: 20%;
-}
-
 #learn-more-label{
 
     color: #FB6D3A;
-    display: flex;
-    align-items: center;
     font-weight: 500;
     font-size: 10px;
-    padding-top:150%;
+
 
 }
 
-
-
-
 #menu-type-section{
 
-     /* background-color: lightseagreen;*/
+    background-color: lightseagreen;
     width: 100%;
-    height: 28%;
+    height: 28vh;
 
 
 }
 
 #restraunt-header-div{
 
-      /*background-color: honeydew;*/
+    background-color: honeydew;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -191,62 +181,23 @@ padding-top: 20%;
    
 }
 
-#restraunt-label{
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#delivery-btn-div{
-
-    margin-right: 4%;
-}
-
-
-#delivery-btn{
-
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    align-items: center;
-    width: 120%;
-    background-color: #FB6D3A;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    padding: 7% 10%;
-    
-
-}
-
 nav{
 
-    /*background-color: red;*/
+    background-color: red;
     margin-right: 5%;
     margin-left: 5%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    
-}
-
-#sub-nav{
-
-    display: flex;
-    width: 100%;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(240, 240, 240);
-    border-radius: 20px;
 }
 
 
 
 .menu-type-nav-item{
-    background-color: whitesmoke;
+
+    background-color: #FCD561;
+    
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -257,11 +208,6 @@ nav{
     padding-bottom: 10px 15px;
     
 
-}
-
-.menu-type-nav-item:hover{
-
-    background-color: #FCD561;
 }
 
 .img-nav-wrapper{
@@ -285,13 +231,13 @@ nav{
 
 #next-arrow-img-wrapper{
 
-    background-color: rgb(240, 240, 240);
+    background-color: gray;
     padding: 15px 15px;
     border-radius:10px;
 }
 #menu-item-section{
 
-    /*background-color: lightpink;*/
+    background-color: lightpink;
     width: 100%;
     height: 28vh;
 
@@ -310,20 +256,13 @@ nav{
 
     width:30%;
     height: 28vh;
-    /*background-color: green; */   
+    background-color: green;    
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
-}
+    justify-content: space-evenly
+   
 
-.menu-item-article-description{
-
-    display: flex;
-    flex-wrap: nowrap;
-    width:100%;
-    align-items: center ;
-    justify-content: space-between;
 
 }
 
@@ -332,15 +271,13 @@ nav{
     width:100%;
     border-radius: 10px;
    
-   
 }
-
 
 
 
 #right-section{
 
-    /*background-color: darkgray;*/
+    background-color: darkgray;
     width:25%;
     height: 100vh;
     
@@ -348,7 +285,7 @@ nav{
 
 #qty-count-section{
 
-      /*background-color: lightskyblue;*/
+    background-color: lightskyblue;
     width: 100%;
     height: 5vh;
 }
@@ -420,7 +357,7 @@ nav{
 #order-address-section{
 
 
-    /*background-color: lightpink;*/
+    background-color: lightpink;
     width: 100%;
     height: 30vh;
 
@@ -428,7 +365,7 @@ nav{
 
 #order-detail-section{
 
-    /*background-color: lightgreen;*/
+    background-color: lightgreen;
     width: 100%;
     height: 35vh;
 }
@@ -443,7 +380,7 @@ nav{
 #order-item{
 
     height: 25%;
-   /* background-color: wheat;*/
+    background-color: wheat;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
@@ -513,8 +450,6 @@ nav{
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgb(182, 181, 181);
 
 }
 
@@ -536,7 +471,7 @@ nav{
 
     display: flex;
     flex-wrap: nowrap;
-    border: 1px solid rgb(182, 181, 181);
+    border: 1px solid black;
     border-radius: 5px;
     align-items: center;
     justify-content: space-evenly;
