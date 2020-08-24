@@ -192,7 +192,17 @@ nav{
     align-items: center;
 }
 
+#sub-nav{
 
+    background-color: yellow;
+    margin-right: 5%;
+    margin-left: 5%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+}
 
 .menu-type-nav-item{
 
