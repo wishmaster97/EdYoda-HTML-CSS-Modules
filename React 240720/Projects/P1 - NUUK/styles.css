@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/***************************initial *************************/
+
+/*
+*/
 
 * {
   -webkit-box-sizing: border-box;
@@ -257,7 +259,8 @@ textarea.w-input {
 }
 
 .w-col-4 {
-  width: 33.33333333%;
+  width: 30%;
+  margin-right: 20px;
 }
 
 .w-col-5 {
@@ -731,7 +734,7 @@ figure {
   -ms-flex-align: center;
   align-items: center;
   background-color: #c1c3cc;
-  background-image: linear-gradient(76deg, rgba(193, 195, 204, 0.83) 35%, rgba(193, 195, 204, 0.28) 65%), url("../img/slide-2.jpg");
+  background-image: linear-gradient(76deg, rgba(193, 195, 204, 0.83) 35%, rgba(193, 195, 204, 0.28) 65%), url("assets/slide-2.jpg");
   background-position: 0px 0px, 50% 0%;
   background-size: auto, cover;
   background-attachment: scroll, fixed;
@@ -758,7 +761,7 @@ figure {
   padding-top: 7%;
   padding-bottom: 7%;
   background-color: #e47312;
-  background-image: linear-gradient(72deg, #e47312, rgba(255, 99, 97, 0.78)), url("../img/banner-2.jpg");
+  background-image: linear-gradient(72deg, #e47312, rgba(255, 99, 97, 0.78)), url("assets/serv-1.jpg");
   background-position: 0px 0px, 50% 50%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -1594,22 +1597,22 @@ figure {
 
 .team-photo {
   min-height: 300px;
-  background-image: url("../img/team-1.jpg");
+  background-image: url("assets/team-1.png");
   background-position: 50% 0%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .team-photo._2 {
-  background-image: url("../img/team-2.jpg");
+  background-image: url("assets/team-2.png");
 }
 
 .team-photo._3 {
-  background-image: url("../img/team-3.jpg");
+  background-image: url("assets/team-3.png");
 }
 
 .team-photo._4 {
-  background-image: url("../img/team-4.jpg");
+  background-image: url("assets/team-4.png");
 }
 
 .team-content {
@@ -1702,7 +1705,7 @@ figure {
   width: 20%;
   min-height: 100px;
   background-color: transparent;
-  background-image: url("../img/logo-5w.png");
+  background-image: url("assets/logo-5w.png");
   background-position: 50% 50%;
   background-size: 100px;
   background-repeat: no-repeat;
@@ -1721,7 +1724,7 @@ figure {
 }
 
 .tab-logo.logo-2 {
-  background-image: url("../img/logo-2w.png");
+  background-image: url("assets/logo-2w.png");
   background-size: 100px;
 }
 
@@ -1730,17 +1733,17 @@ figure {
 }
 
 .tab-logo.logo-3 {
-  background-image: url("../img/logo-3w.png");
+  background-image: url("assets/logo-3w.png");
   background-size: 100px;
 }
 
 .tab-logo.logo-4 {
-  background-image: url("../img/logo-4w.png");
+  background-image: url("assets/logo-4w.png");
   background-size: 100px;
 }
 
 .tab-logo.logo-5 {
-  background-image: url("../img/logo-1w.png");
+  background-image: url("assets/logo-1w.png");
   background-size: 100px;
 }
 
@@ -2249,8 +2252,8 @@ figure {
   -ms-flex-align: center;
   align-items: center;
   background-color: #c1c3cc;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(55%, hsla(0, 0%, 100%, 0.71)), to(#fff)), url("../img/sub.jpg");
-  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.71) 55%, #fff), url("../img/sub.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(55%, hsla(0, 0%, 100%, 0.71)), to(#fff)), url("assets/sub.jpg");
+  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.71) 55%, #fff), url("assets/sub.jpg");
   background-position: 0px 0px, 50% 100%;
   background-size: auto, cover;
 }
@@ -2429,7 +2432,7 @@ figure {
   width: 12px;
   height: 12px;
   margin-right: 7px;
-  background-image: url("../img/checkmark.svg");
+  background-image: url("assets/checkmark.svg");
   background-position: 0px 0px;
   background-size: contain;
   background-repeat: no-repeat;
