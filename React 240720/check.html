@@ -1,228 +1,59 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <title> HTML REF </title>
-    <script src="https://kit.fontawesome.com/yourcode.js"></script>
-        <style>
-            header{
-                left: 0;
-                top: 0;
-                width:100%;
-                position: fixed;
-                Padding:16px 78px;
-                background-color: #fff;
-            }
-
-            #logo{
-                Width: 130px;
-                font-size: 32px;
-                color: #0084ff;
-                
-            }
-
-            #stories{
-
-                Margin: 0;
-                
-                color: black;
-                font-size: 15px;
-                Font: Raleway;
-                font-style: Italic
-            }
-
-        
-        #explore{
-            color: #000;
-        }
-
-        footer{
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            Padding:20px 78px;
-            background-color:#172146;
-        }
-
-            body{
-                background-color: honeydew;
-                margin-left: 18%;
-                margin-right: 15%;
-
-            
-            }
-
-            #item{
-                background-color: lightblue;
-                border: 2px solid lightgray;
-                border-radius: 4%;
-
-            }
-        
-        
-        #items div{
-            display: inline-block;
-            height: 100%;
-            width: 28%;
-            background-color: white;
-            border: lightslategray;
-            border-radius: 4%;
-            padding-right: 25px;
-            padding-top: 30px;
-        }
-
-        #item_img{
-            
-            height: 176px;
-            width: 100%
-        }
-
-        #section1{
-            margin-top: 50px;
-        }
-
-        #item_btn{
-
-            padding:6px 14px;
-            width: auto;
-            color: #0084ff;
-            border-radius: 15px;
-            border: 1px solid #0084ff;
-            margin: 5px;
-            cursor: pointer
-        }
-
-        .box{
-
-            background-color: white;
-        }
-        
-        #title{
-            size: 18px;
-            text-align: left;
-            margin:0;
-            font-weight: 600;
-        }
-
-        #desc{
-            size:14px;
-            font-weight: 400;
-                line-height: 1.43;
-                color: rgba(0,0,0,.6);
-                margin: 4px 0
-        }
-
-        #Author{
-            color: #0096ff;
-            size: 14px;
-            font-style: italic;
-            font-weight: 500;
-        }
-
-        #date{
-            color: rgba(0,0,0,.7);
-            size: 14px;
-            font-weight: 300;
-
-        }
-        </style>
-    </head>
-        <body>
-            <header>
-                <span id="logo">EDYODA</sapn>
-                
-                <span id="explore" style="padding-left: 70px; font-size:20px;">Explore Categories <i class="fa fa-sort-desc"></i></span>
-                <p id="stories" style="size: 5px;">Stories</p>
-
-            </header>
-
-            <div id="section1">
-                <p style="margin-bottom: 20px; size: 16px; padding-top: 16px;"><h1>Trending Post</h1></p>
-                <i class="fa fa-filter" aria-hidden="true"></i><p style="size:14px; font-weight: 600; margin-left: 8px;">Filter by Category</p>
-            </div>
-            
-                <div style="display: inline;">
-                    <input type="button" value="All" id="item_btn">
-                    <input type="button" value="Artificial Inteligence" id="item_btn">
-                    <input type="button" value="Cloyd Computing" id="item_btn">
-                    <input type="button" value="DevOps" id="item_btn">
-                    <input type="button" value="Programming Languages" id="item_btn">
-                    <input type="button" value="Mobile Application Development" id="item_btn">
-                    <input type="button" value="Technology and Tools" id="item_btn">
-                    <input type="button" value="Get a Job in Tech Company" id="item_btn">
-                    <input type="button" value="Others" id="item_btn">
-
-                <div id="items" style="padding-bottom: 100px;"> 
-                    <div id="item" class="box">
-                        <img id="item_img" src="https://edyoda.s3.amazonaws.com/media/blog-images/learn_machine_learning_courses_online.png">
-                        <p id="title">Introduction to Machine Learning</p> 
-                        <p><span id="Author">EDYODA</span><span id="date">|22 AUG 2019</span></p>
-                        <p id="desc">Machine Learning Machine Learning Machine LearningMachine Learning Machine Learning Machine Learning Machine Learning Machine Learning</p> 
-
-                    </div>
-                    <div id="item">
-                        <img id="item_img" src="https://edyoda.s3.amazonaws.com/media/blog-images/6.png">
-                        <p id="title">LAMP Stack vs MEAN Stack</p> 
-                        <p><span id="Author">EDYODA</span><span id="date">|24 AUG 2019</span></p>
-                        <p id="desc">LAMP Stack vs MEAN Stack LAMP Stack vs MEAN Stack LAMP Stack vs MEAN Stack LAMP Stack vs MEAN Stack LAMP Stack vs MEAN St</p> 
-
-                    </div>
-                    <div id="item">
-                        <img id="item_img" src="https://edyoda.s3.amazonaws.com/media/blog-images/4.png">
-                        <p id="title">Cloud Computing</p> 
-                        <p><span id="Author">EDYODA</span><span id="date">|24 AUG 2019</span></p>
-                        <p id="desc">Cloud Computing Cloud Computing Cloud Computing Cloud Computing Cloud ComputingCloud ComputingCloud Computing    </p> 
-
-                    </div>
-                    <div id="item">
-                        <img id="item_img" src="https://edyoda.s3.amazonaws.com/media/blog-images/3.png">
-                        <p id="title">Challenges to Machine Learning</p> 
-                        <p><span id="Author">EDYODA</span><span id="date">|24 AUG 2019</span></p>
-                        <p id="desc">Challenges to Machine LearningChallenges to Machine Learning Clenges to Machine Learning Challenges to Machine Learning</p> 
-
-                    </div>
-                    <div id="item">
-                        <img id="item_img" src="https://edyoda.s3.amazonaws.com/media/blog-images/5.png">
-                        <p id="title">Cyber Security</p> 
-                        <p><span id="Author">EDYODA</span><span id="date">|26 AUG 2019</span></p>
-                        <p id="desc">Cyber Security Cyber Security Cyber Security Cyber Security Cyber Security Cyber Security Cyber Security </p> 
-
-                    </div>
-                    <div id="item">
-                        <img id="item_img" src="https://edyoda.s3.amazonaws.com/media/blog-images/7.png">
-                        <p id="title">Data Recovery</p> 
-                        <p><span id="Author">EDYODA</span><span id="date">|22 SEP 2019</span></p>
-                        <p id="desc">Data Recovery Data Recovery Data RecoveryData Recovery Data Recovery Data RecoveryData Recovery Data Recovery</p> 
-
-                    </div>
-                    <div id="item">
-                        <img id="item_img" src="https://edyoda.s3.amazonaws.com/media/blog-images/automation-testing-an-overview-2.png">
-                        
-                        <p id="title">Web Scraping</p> 
-                        <p><span id="Author">EDYODA</span><span id="date">|23 SEP 2019</span></p>
-                        <p id="desc">Web Scraping Web S   ping Web Scraping Web Scraping Web Scraping Web Scraping Web Scraping Web Scraping </p> 
-                    </div>
-                    <div id="item">
-                        <img id="item_img" src="https://edyoda.s3.amazonaws.com/media/blog-images/what_is_isa_blog_1.png">
-                        <p id="title">Income share Agreement</p> 
-                        <p><span id="Author">EDYODA</span><span id="date">|14 OCT 2019</span></p>
-                        <p id="desc">Income Share agrrement, Income Share agrrement, ISA ISA , Income Share agrrement, ISA  Income Share agrrement, ISA  </p> 
-
-                    </div>
-                    <div id="item">
-                        <img id="item_img" src="https://edyoda.s3.amazonaws.com/media/blog-images/practical_machine_learning_1.png">
-                        <p id="title">ML with Python & Keras</p> 
-                        <p><span id="Author">EDYODA</span><span id="date">|15 OCT 2019</span></p>
-                        <p id="desc">ML with Python & Keras ML with Python & Keras ML with Python & Keras ML with Python & Keras ML with Python & Keras</p> 
-
-                    </div>
-                </div>
-
-                <footer>
-
-                </footer>
-        
-
-    </body>
-
+<html>
+ <head>
+  <title>CSV File to HTML Table Using AJAX jQuery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ </head>
+ <body>
+  <div class="container">
+   <div class="table-responsive">
+    <h1 align="center">CSV File to HTML Table Using AJAX jQuery</h1>
+    <br />
+    <div align="center">
+     <button type="button" name="load_data" id="load_data" class="btn btn-info">Load Data</button>
+    </div>
+    <br />
+    <div id="employee_table">
+    </div>
+   </div>
+  </div>
+ </body>
 </html>
+
+<script>
+$(document).ready(function(){
+ $('#load_data').click(function(){
+  $.ajax({
+   url:"file:/employees.csv",
+   dataType:"text",
+   success:function(data)
+   {
+    var employee_data = data.split(/\r?\n|\r/);
+    var table_data = '<table class="table table-bordered table-striped">';
+    for(var count = 0; count<employee_data.length; count++)
+    {
+     var cell_data = employee_data[count].split(",");
+     table_data += '<tr>';
+     for(var cell_count=0; cell_count<cell_data.length; cell_count++)
+     {
+      if(count === 0)
+      {
+       table_data += '<th>'+cell_data[cell_count]+'</th>';
+      }
+      else
+      {
+       table_data += '<td>'+cell_data[cell_count]+'</td>';
+      }
+     }
+     table_data += '</tr>';
+    }
+    table_data += '</table>';
+    $('#employee_table').html(table_data);
+   }
+  });
+ });
+ 
+});
+</script>
