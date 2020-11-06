@@ -1,10 +1,4 @@
-
-
-//var section1 = document.getElementById("clothing");
-//var section2 = document.getElementById("accessories");
-
-var card_grid_clothing = document.getElementById("clothingCards");
-var card_grid_accessories = document.getElementById("accessoriesCards");
+var cardGrid = document.getElementById('clothingCards');
 
 var productList = [
     {
@@ -229,32 +223,31 @@ var productList = [
     }
   ];
 
+  
+function generateThumbCard(data) {
 
-  function generateCard(data){
+    console.log(data);
+    /*  <div class="card" id="1">
+                <a href="product.html?product_id=1">
+                <div class="img">
+                <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg"></div>
+                <div class="details"><h3>Men Navy Blue Solid Sweatshirt</h3><h4>United Colors of Benetton</h4><h5>Rs 2599</h5></div></a>
+                </div> */
 
-    console.log(data.isAccessory);
-       
-        
-       // var card_grid = document.createElement('div');
-        //card_grid.className = "card-conatiner";
-       
+    var card = document.createElement('div');
+    card.className = "card";
+    card.id = data.id;
+    card.onclick = function() {
+      alert('Card Clicked for => ' + data.title);
+    }
 
-        var card = document.createElement('div');
-        card.className = "card";
-        card.id = data.id;
+    var thumbnail = document.createElement('img');
+    thumbnail.src = data.preview;
+    thumbnail.className = "img";
+	
+	 
 
-        var img_grid = document.createElement('div');
-        img_grid.className = "img-grid";
-
-        
-
-        var thumbnail = document.createElement('img');
-        thumbnail.src = data.preview;
-       
-        img_grid.appendChild(thumbnail);
-
-
-        var titles = document.createElement('div');
+    var titles = document.createElement('div');
         titles.className = "details";
 
 
@@ -271,38 +264,15 @@ var productList = [
         titles.appendChild(titleh4);
         titles.appendChild(titleh5);
 
-        card.appendChild(img_grid);
+        card.appendChild(thumbnail);
         card.appendChild(titles);
 
-        console.log(card);
-        console.log(card.isAccessory);
-        //card_grid.appendChild(card);
+    console.log(card);
+    cardGrid.appendChild(card);
 
-       
-        //return card_grid;
-        if(data.isAccessory == true){
+    return card;
+}
 
-            console.log("acc");
-            card_grid_accessories.appendChild(card);
-            
-
-        }
-        else{   
-            console.log("col");
-            card_grid_clothing.appendChild(card);
-           
-        }
-        
-
-  }
-
-  for(var i=0; i <productList.length; i++){
-
-        generateCard(productList[i]);
-
-       
-
-  }
-
-
-  
+for(var i=0; i<productList.length; i++) {
+  generateThumbCard(productList[i]);
+}

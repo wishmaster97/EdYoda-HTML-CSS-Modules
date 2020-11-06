@@ -46,11 +46,18 @@ h2 {
 .card {
     width: 15%;
     min-width: 200px;
-    height: auto;
+    max-height: auto;
     margin: 30px 10px;
     cursor: pointer;
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-conatiner :hover > .card{
+
+    cursor: pointer;
+    
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
 }
 
 .card a {
@@ -60,13 +67,14 @@ h2 {
 
 
 
-.card .img img {
+.card .img-grid img {
     width: 100%;
 }
 
 .card .details {
     padding-left: 10px;
     margin: 10px auto;
+  
 }
 
 .card .details h3 {
@@ -75,6 +83,8 @@ h2 {
     font-weight: 400;
     letter-spacing: 0.5px;
     color: rgb(27, 25, 25);
+    
+    overflow: hidden;
 }
 
 .card .details h4 {
