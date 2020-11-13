@@ -45,13 +45,15 @@ function generateImageArr(photo_arr){
     
 }
 
+
+
    
  // **************************************LEFT Column *************************************************//
     var left_preview = document.createElement('div');
     left_preview.className = "left-column";
     
     var prev_img = document.createElement('img');
-    prev_img.src = "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg";
+    prev_img.src = photoArr[0].thumbnail;
     prev_img.alt = "Main preview image";
 
   
@@ -216,3 +218,86 @@ function generateImageArr(photo_arr){
 /*for(var i=0; i<videoArr.length; i++) {
   generateVideoCard(videoArr[i], i);
 }*/
+
+
+// ******************************* to get ids ofimages ********************************/
+
+function createProductPreviews(){
+
+    var photo0 = document.getElementById("img0");
+    photo0.src = photoArr[0].thumbnail;
+    photo0.classList.add('active');
+    //console.log(photo0);
+    //console.log(photo0.src);
+  
+    // Product Preview Image 1
+    var photo1 = document.getElementById("img1");
+    photo1.src = photoArr[1].thumbnail;
+  
+    // Product Preview Image 2
+    var photo2 = document.getElementById("img2");
+    photo2.src = photoArr[2].thumbnail;
+  
+    // Product Preview Image 3
+    var photo3 = document.getElementById("img3");
+    photo3.src = photoArr[3].thumbnail;
+  
+    // Product Preview Image 4
+    var photo4 = document.getElementById("img4");
+    photo4.src = photoArr[4].thumbnail;
+  
+
+    function changeImage() {
+        // Photo 0
+        photo0.addEventListener("click", function() {
+        prev_img.src = photoArr[0].thumbnail;
+        //photo0.classList.add("active");
+        });
+    
+        // Photo 1
+        photo1.addEventListener("click", function() {
+            prev_img.src = photoArr[1].thumbnail;
+           // photo1.classList.add("active");
+           
+
+        });
+        // Photo 2
+        photo2.addEventListener("click", function() {
+            prev_img.src = photoArr[2].thumbnail;
+            //photo2.classList.add("active");
+        });
+    
+        // Photo 3
+        photo3.addEventListener("click", function() {
+            prev_img.src = photoArr[3].thumbnail;
+            //photo3.classList.add("active");
+        });
+    
+        // Photo 4
+        photo4.addEventListener("click", function() {
+            prev_img.src = photoArr[4].thumbnail;
+           // photo4.classList.add("active");
+        });
+    
+       
+    
+        // Toggle Active Class - Jquery- Part
+        $(document).on("click", ".previewImg img", function() {
+          $(this)
+            .addClass("active")
+            .siblings()
+            .removeClass("active");
+        });
+      }
+      changeImage();
+    }
+
+    createProductPreviews();
+
+
+    //***** Button Click Functionality ************//
+
+    var get_btn = document.getElementById('add-to-cart');
+    get_btn.addEventListener("click", function() {
+        alert("Item Added to Cart Successfully ! ")
+        });
