@@ -16,6 +16,12 @@ var tableData = document.getElementById("table-data");
 
 function createRow(data){
 
+    //var tableTD = document.createElement("table");
+    //tableTD.className = "table-td";
+
+    //var tbodyTD = document.createElement("tbody");
+    //tbodyTD.className = "tbody-td";
+
     var dataRow = document.createElement("tr");
     dataRow.className = "data-row";
 
@@ -46,6 +52,9 @@ function createRow(data){
     dataRow.appendChild(col4);
     dataRow.appendChild(col5);
 
+    //tbodyTD.appendChild(dataRow);
+    //tableTD.appendChild(tbodyTD);
+    //tableData.appendChild(tableTD);
     tableData.appendChild(dataRow);
     console.log(dataRow);
     console.log(tableData);    
@@ -58,3 +67,14 @@ function createRow(data){
 var arr = [23, "Abhijeet", "Tedle", "t.abhijeet97@gmail.com", 8446330088];
 createRow(arr);
 
+function getTableRowData(url) {
+    $.get(url, function(data) {
+      var responseData = data;
+
+      console.log(responseData);
+
+});
+}
+
+
+getTableRowData(url);
