@@ -16,7 +16,7 @@ var tableData = document.getElementById("table-data");
 
 function createRow(data){
 
-    console.log(JSON.stringify(data));
+    //console.log(JSON.stringify(data));
 
     //var tableTD = document.createElement("table");
     //tableTD.className = "table-td";
@@ -24,46 +24,52 @@ function createRow(data){
     //var tbodyTD = document.createElement("tbody");
     //tbodyTD.className = "tbody-td";
 
+    //var linkData = document.createElement("a");
+    //linkData.href = "index.html?person_id="+data.id;
+
     var dataRow = document.createElement("tr");
     dataRow.className = "data-row";
-
+    //dataRow.click(function(){ window.location = "index.html?person_id="+data.id; });
+    var att = document.createAttribute("data-href");
+    att.value = "./index.html?person_id="+data.id;
+    dataRow.setAttributeNode(att);
 
     var col1 = document.createElement("td");
     col1.className = "column1";
     col1.innerText = data.id;
 
     var col2 = document.createElement("td");
-    col2.className = "column1";
+    col2.className = "column2";
     col2.innerText = data.firstName;
 
     var col3 = document.createElement("td");
-    col3.className = "column1";
+    col3.className = "column3";
     col3.innerText = data.lastName;
 
     var col4 = document.createElement("td");
-    col4.className = "column1";
+    col4.className = "column4";
     col4.innerText = data.email;
 
     var col5 = document.createElement("td");
-    col5.className = "column1";
+    col5.className = "column5";
     col5.innerText = data.phone;
 
-    //var linkData = document.createElement("a");
-    //linkData.href = "index.html?person_id="+data.id;
+   
 
     dataRow.appendChild(col1);
     dataRow.appendChild(col2);
     dataRow.appendChild(col3);
     dataRow.appendChild(col4);
     dataRow.appendChild(col5);
-    //dataRow.appendChild(linkData);
+
+    //linkData.appendChild(dataRow);
 
     //tbodyTD.appendChild(dataRow);
     //tableTD.appendChild(tbodyTD);
     //tableData.appendChild(tableTD);
     tableData.appendChild(dataRow);
     //console.log(dataRow);
-    console.log(tableData);    
+    //console.log(tableData);    
 
 
     $(document).on("click", "tbody tr", function() {
@@ -87,39 +93,138 @@ function getTableRowData(url) {
 
       //console.log(responseData);
       var objectElement = responseData.map(createRow);
-      console.log(typeof(objectElement));
-   
+      console.log(typeof(objectElement));  
 
-});
+    });
 }
 
 
 getTableRowData(url);
 
 
-//**************** Fetching Details to the Right section of the page**********************/
 
-var infoContent = document.getElementById("info-content");
 
-function showSelectedDetail(){
 
-    /*
-    <div id="info-content">
-                <div><b>User selected:</b> Marcellin Shrestha</div>
-                <div>
-                    <b>Description: </b>
-                    <textarea cols="50" rows="5" readonly>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quia nihil. Est, illum minima libero rerum, nihil distinctio placeat sint nam quae repellendus obcaecati delectus totam non odio. Sint, reprehenderit?
-                    </textarea>
-                </div>
-                <div><b>Address:</b> 6480 Nec Ct</div>
-                <div><b>City:</b> Dinwiddie</div>
-                <div><b>State:</b> NV</div>
-                <div><b>Zip:</b> 91295</div>
-    </div> */
+/***********************************Taking all the row Href in here ************************/
+
 
     
+  /* 
+ 
+    let myPromise = new Promise(function(myResolve, myReject) {
+       
+            
+            window.addEventListener('DOMContentLoaded', () => {
+            const rows = document.querySelectorAll("tr[data-href]");
+            console.log(rows);
+            //alert("All Loaded");
+
+            if (rows != null) {
+                myResolve(rows);
+              } else {
+                myReject("Error");
+              }
+            
+        });
+      
+       
+      });
+      
+      myPromise.then(
+        function(value) {
+
+            window.addEventListener('DOMContentLoaded', () => {
+            const rows = document.querySelectorAll("tr[data-href]");
+            value.forEach(row => {
+
+                row.addEventListener("click", () => {
+                    window.location.href = row.dataset.href;   
+                });
+                
+            });});
+        },
+        function(error) {console.log(error);}
+      );
+
+*/
+
+let myPromise = new Promise(function(myResolve, myReject) {
+    setTimeout(function() { myResolve("Data Fetched"); }, 3000);
+  });
+  
+  myPromise.then(function(value) {
+
+    //alert(value);
+    
+    const rows = document.querySelectorAll("tr[data-href]");
+    console.log(rows);
+    rows.forEach(row => {
+
+        console.log(row);
+        row.addEventListener("click", () => {
+            window.location.href = row.dataset.href;   
+        });
+        
+    });
     
 
-    
+  });
+
+
+
+  /************************** Get Details ater table row click***********************************/
+
+  function getPersonDetail() {
+    // Get Product Id From URL
+    var searchId = window.location.search.split("=")[1];
+    console.log(searchId);
+  
+    // Get Person Details
+    $.get(
+      url+ "/" + searchId,
+      function(data) {
+  
+        console.log(data);
+        
+        
+        fullName = data.firstName +" "+data.lastName;
+        description = data.description;
+        address = data.address;
+        city = data.city;
+        state = data.state;
+        zip = data.zip;
+  
+        createDetailSecton(
+            fullname,
+           description,
+            address,
+            city,
+            state,
+            zip
+        );
+      } 
+    );
+  }
+  getPersonDetail();
+
+  //Creare Detail Section
+  function createDetailSecton(
+    fullname,
+   description,
+    address,
+    city,
+    state,
+    zip
+){
+    document.getElementById("fetchName").innerHTML = fullname;
+    document.getElementById("fetchDescription").innerHTML = description;
+    document.getElementById("fetchAddress").innerHTML = address;
+    document.getElementById("fetchCity").innerHTML = city;
+    document.getElementById("fetchState").innerHTML = state;
+    document.getElementById("fetchZip").innerHTML = zip;
+
+
 }
+  
+
+
