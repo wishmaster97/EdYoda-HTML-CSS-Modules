@@ -16,8 +16,6 @@ var tableData = document.getElementById("table-data");
 
 function createRow(data){
 
-    console.log(JSON.stringify(data));
-
     //var tableTD = document.createElement("table");
     //tableTD.className = "table-td";
 
@@ -30,96 +28,53 @@ function createRow(data){
 
     var col1 = document.createElement("td");
     col1.className = "column1";
-    col1.innerText = data.id;
+    col1.innerText = data[0];
 
     var col2 = document.createElement("td");
     col2.className = "column1";
-    col2.innerText = data.firstName;
+    col2.innerText = data[1];
 
     var col3 = document.createElement("td");
     col3.className = "column1";
-    col3.innerText = data.lastName;
+    col3.innerText = data[2];
 
     var col4 = document.createElement("td");
     col4.className = "column1";
-    col4.innerText = data.email;
+    col4.innerText = data[3];
 
     var col5 = document.createElement("td");
     col5.className = "column1";
-    col5.innerText = data.phone;
-
-    //var linkData = document.createElement("a");
-    //linkData.href = "index.html?person_id="+data.id;
+    col5.innerText = data[4];
 
     dataRow.appendChild(col1);
     dataRow.appendChild(col2);
     dataRow.appendChild(col3);
     dataRow.appendChild(col4);
     dataRow.appendChild(col5);
-    //dataRow.appendChild(linkData);
 
     //tbodyTD.appendChild(dataRow);
     //tableTD.appendChild(tbodyTD);
     //tableData.appendChild(tableTD);
     tableData.appendChild(dataRow);
-    //console.log(dataRow);
+    console.log(dataRow);
     console.log(tableData);    
 
-
-    $(document).on("click", "tbody tr", function() {
-        $(this)
-          .addClass("active")
-          .siblings()
-          .removeClass("active");
-      });
-    
 
 
 }
 
 
-//var arr = [23, "Abhijeet", "Tedle", "t.abhijeet97@gmail.com", 8446330088];
-//createRow(arr);
+var arr = [23, "Abhijeet", "Tedle", "t.abhijeet97@gmail.com", 8446330088];
+createRow(arr);
 
 function getTableRowData(url) {
     $.get(url, function(data) {
       var responseData = data;
 
-      //console.log(responseData);
-      var objectElement = responseData.map(createRow);
-      console.log(typeof(objectElement));
-   
+      console.log(responseData);
 
 });
 }
 
 
 getTableRowData(url);
-
-
-//**************** Fetching Details to the Right section of the page**********************/
-
-var infoContent = document.getElementById("info-content");
-
-function showSelectedDetail(){
-
-    /*
-    <div id="info-content">
-                <div><b>User selected:</b> Marcellin Shrestha</div>
-                <div>
-                    <b>Description: </b>
-                    <textarea cols="50" rows="5" readonly>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quia nihil. Est, illum minima libero rerum, nihil distinctio placeat sint nam quae repellendus obcaecati delectus totam non odio. Sint, reprehenderit?
-                    </textarea>
-                </div>
-                <div><b>Address:</b> 6480 Nec Ct</div>
-                <div><b>City:</b> Dinwiddie</div>
-                <div><b>State:</b> NV</div>
-                <div><b>Zip:</b> 91295</div>
-    </div> */
-
-    
-    
-
-    
-}

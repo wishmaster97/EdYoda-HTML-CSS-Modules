@@ -129,11 +129,15 @@ getCardsData();
 function getProductDetail() {
   // Get Product Id From URL
   var searchId = window.location.search.split("=")[1];
+  console.log(searchId);
 
   // Get Product Details
   $.get(
     "https://5d76bf96515d1a0014085cf9.mockapi.io/product/" + searchId,
     function(data) {
+
+      console.log(data);
+      
       var productDetail = data;
       name = productDetail.name;
       imageSrc = productDetail.preview;
