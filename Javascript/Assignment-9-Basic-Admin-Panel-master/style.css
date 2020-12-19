@@ -135,13 +135,13 @@ img {
   overflow: hidden;
 }
 
-#table-data {
-  max-height: 500px;
+#table-body {
+  max-height: 450px;
   overflow-y: overlay;
 }
 
 @-moz-document url-prefix() {
-  #table-data {
+  #table-body {
     overflow-y: scroll;
   }
 }
