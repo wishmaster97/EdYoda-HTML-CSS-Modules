@@ -22,6 +22,7 @@
      rel="stylesheet"
      type="text/css"
      href="./slick/slick/slick-theme.css"
+
    />
 
    <script
@@ -29,6 +30,18 @@
      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
      crossorigin="anonymous"
    ></script>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#search-box").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#table-body tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 </head>
 
 <body>
@@ -62,7 +75,11 @@
                     </table>
                 </div>
 
+<<<<<<< HEAD
                 <div id="table-body"> 
+=======
+                <div id="table-body">
+>>>>>>> e06b55b292daf2d8080a73f87fb623c8d18b781b
                     <table>
                         <tbody id="table-data">
 
@@ -81,17 +98,16 @@
             <h1>Details</h1>
             <p>Click on a table item to get detailed information</p>
             <div id="info-content">
-                <div><b>User selected:</b> <span id="fetchName">Marcellin Shrestha</span></div>
+                <div><b>User selected:</b> <span id="fetchName"></span></div>
                 <div>
                     <b>Description: </b>
                     <textarea cols="50" rows="5" id="fetchDescription" readonly>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quia nihil. Est, illum minima libero rerum, nihil distinctio placeat sint nam quae repellendus obcaecati delectus totam non odio. Sint, reprehenderit?
-                    </textarea>
+                       </textarea>
                 </div>
-                <div><b>Address:</b> <span id="fetchAddress">6480 Nec Ct</span></div>
-                <div><b>City:</b>  <span id="fetchCity">Dinwiddie</span></div>
-                <div><b>State:</b> <span id="fetchState">NV</span> </div>
-                <div><b>Zip:</b>  <span id="fetchZip">91295</span></div>
+                <div><b>Address:</b> <span id="fetchAddress"></span></div>
+                <div><b>City:</b>  <span id="fetchCity"></span></div>
+                <div><b>State:</b> <span id="fetchState"></span> </div>
+                <div><b>Zip:</b>  <span id="fetchZip"></span></div>
             </div>
         </div>
 

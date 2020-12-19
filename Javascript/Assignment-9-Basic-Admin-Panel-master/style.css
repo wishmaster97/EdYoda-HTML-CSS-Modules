@@ -84,7 +84,7 @@ h1 {
 }
 
 #info-content {
-  /*display: none;*/
+  display: none;
   margin-top: 10px;
 }
 
@@ -129,6 +129,7 @@ img {
   box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
 }
 
+
 #table-headers {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -137,7 +138,11 @@ img {
 
 #table-body {
   max-height: 450px;
+<<<<<<< HEAD
   overflow-y: overlay;
+=======
+  overflow-y: scroll;
+>>>>>>> e06b55b292daf2d8080a73f87fb623c8d18b781b
 }
 
 @-moz-document url-prefix() {
