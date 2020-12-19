@@ -1,32 +1,11 @@
 var url = 'http://www.filltext.com/?rows=32&id=%7Bnumber%7C1000%7D&firstName=%7BfirstName%7D&lastName=%7BlastName%7D&email=%7Bemail%7D&phone=%7Bphone%7C(xxx)xxx-xx-xx%7D&address=%7BaddressObject%7D&description=%7Blorem%7C32%7D';
 
-console.log(url);
-
-const url_data=[];
-
-/*
-function getArrayOfURL(url) {
-    $.get(url, function(data) {
-      var responseData = data;
-
-      //console.log(responseData);
-      responseData.forEach(element => {
-          url_data.push(element);
-      });
-       
-      console.log(typeof(url_data));
-    });
-}
-*/
-
-//getArrayOfURL(url);
-
 //******************* Creating a JS Dom Element for dynamic update *************************//
 
 /*
   <tr class="data-row">
                                 <td class="column1">28</td>
-                                <td class="column2">Larisa</td>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                                <td class="column2">Larisa</td>
                                 <td class="column3">Llaneza</td>
                                 <td class="column4">SCallison@non.org</td>
                                 <td class="column5">(763)248-9034</td>
@@ -50,11 +29,10 @@ function createRow(data){
 
     var dataRow = document.createElement("tr");
     dataRow.className = "data-row";
-    dataRow.id = data.id;
     //dataRow.click(function(){ window.location = "index.html?person_id="+data.id; });
-    //var att = document.createAttribute("data-href");
-    //att.value = "./index.html?person_id="+data.id;
-    //dataRow.setAttributeNode(att);
+    var att = document.createAttribute("data-href");
+    att.value = "./index.html?person_id="+data.id;
+    dataRow.setAttributeNode(att);
 
     var col1 = document.createElement("td");
     col1.className = "column1";
@@ -93,19 +71,17 @@ function createRow(data){
     //console.log(dataRow);
     //console.log(tableData);    
 
+
+    $(document).on("click", "tbody tr", function() {
+        $(this)
+          .addClass("active")
+          .siblings()
+          .removeClass("active");
+      });
+    
+
+
 }
-
-$(document).on("click", "tbody tr", function() {
-    //console.log(this.id);
-    getPersonDetail(this.id);
-    document.getElementById("info-content").style.display = "block";
-    $(this)
-      .addClass("active")
-      .siblings()
-      .removeClass("active");
-  });
-
-
 
 
 //var arr = [23, "Abhijeet", "Tedle", "t.abhijeet97@gmail.com", 8446330088];
@@ -115,12 +91,9 @@ function getTableRowData(url) {
     $.get(url, function(data) {
       var responseData = data;
 
-      console.log(responseData);
-      responseData.forEach(element => {
-        url_data.push(element);
-    });
+      //console.log(responseData);
       var objectElement = responseData.map(createRow);
-       
+      console.log(typeof(objectElement));  
 
     });
 }
@@ -173,7 +146,7 @@ getTableRowData(url);
         function(error) {console.log(error);}
       );
 
-
+*/
 
 let myPromise = new Promise(function(myResolve, myReject) {
     setTimeout(function() { myResolve("Data Fetched"); }, 3000);
@@ -197,50 +170,42 @@ let myPromise = new Promise(function(myResolve, myReject) {
 
   });
 
-*/
+
 
   /************************** Get Details ater table row click***********************************/
 
-  function getPersonDetail(getID) {
+  function getPersonDetail() {
     // Get Product Id From URL
-    var searchId = parseInt(getID);
+    var searchId = window.location.search.split("=")[1];
     console.log(searchId);
   
     // Get Person Details
+    $.get(
+      url+ "/" + searchId,
+      function(data) {
   
+        console.log(data);
+        
+        
+        fullName = data.firstName +" "+data.lastName;
+        description = data.description;
+        address = data.address;
+        city = data.city;
+        state = data.state;
+        zip = data.zip;
   
-       url_data.forEach(element => {
-            
-        //console.log(typeof(element.id) +" "+typeof(parseInt(searchId)));
-        //console.log(element.id);
-
-            if(parseInt(searchId) == element.id){
-            
-               console.log("In True");
-                  
-                fullName = element.firstName +" "+element.lastName;
-                description = element.description;
-                address = element.address.streetAddress;
-                city = element.address.city;
-                state = element.address.state;
-                zip = element.address.zip;
-        
-                    createDetailSecton(
-                        fullName,
-                        description,
-                        address,
-                        city,
-                        state,
-                        zip
-                    );
-            }
-        });
-        
-      
+        createDetailSecton(
+            fullname,
+           description,
+            address,
+            city,
+            state,
+            zip
+        );
       } 
-  
-
- // getPersonDetail();
+    );
+  }
+  getPersonDetail();
 
   //Creare Detail Section
   function createDetailSecton(
@@ -251,9 +216,7 @@ let myPromise = new Promise(function(myResolve, myReject) {
     state,
     zip
 ){
-
-    console.log(fullname+description+address+city+state+zip);
-    document.getElementById("fetchName").innerText = fullname;
+    document.getElementById("fetchName").innerHTML = fullname;
     document.getElementById("fetchDescription").innerHTML = description;
     document.getElementById("fetchAddress").innerHTML = address;
     document.getElementById("fetchCity").innerHTML = city;
