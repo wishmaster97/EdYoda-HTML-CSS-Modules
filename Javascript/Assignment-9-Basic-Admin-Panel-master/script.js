@@ -4,22 +4,22 @@ console.log(url);
 
 const url_data=[];
 
-/*
 function getArrayOfURL(url) {
     $.get(url, function(data) {
       var responseData = data;
 
-      //console.log(responseData);
-      responseData.forEach(element => {
-          url_data.push(element);
-      });
+      console.log(JSON.stringify(responseData));
+      document.getElementById("url_data_fetch").innerHTML = JSON.stringify(responseData);
+     // responseData.forEach(element => {
+      //    url_data.push(element);
+      //});
        
-      console.log(typeof(url_data));
-    });
+      //console.log(typeof(url_data));
+   });
 }
-*/
 
-//getArrayOfURL(url);
+
+getArrayOfURL(url);
 
 //******************* Creating a JS Dom Element for dynamic update *************************//
 
@@ -33,7 +33,6 @@ function getArrayOfURL(url) {
                             </tr>
 */ 
 var tableData = document.getElementById("table-data");
-
 
 function createRow(data){
 

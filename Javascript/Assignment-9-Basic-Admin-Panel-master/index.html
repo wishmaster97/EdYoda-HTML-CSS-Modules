@@ -1,120 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Data page</title>
-     <!-- Font-Awesome CDN -->
-     <link
-     href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-     rel="stylesheet"
-   />
-   <!-- Google Font -->
-   <link
-     href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
-     rel="stylesheet"
-   />
-   <!-- Slick Files -->
-   <link rel="stylesheet" type="text/css" href="./slick/slick/slick.css" />
-   <link
-     rel="stylesheet"
-     type="text/css"
-     href="./slick/slick/slick-theme.css"
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Data page</title>
+        <!-- Font-Awesome CDN -->
+        <link
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet"
+    />
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+        rel="stylesheet"
+    />
+    <!-- Slick Files -->
+    <link rel="stylesheet" type="text/css" href="./slick/slick/slick.css" />
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="./slick/slick/slick-theme.css"
 
-   />
+    />
 
-   <script
-     src="https://code.jquery.com/jquery-3.4.1.min.js"
-     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-     crossorigin="anonymous"
-   ></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"
+    ></script>
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  $("#search-box").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#table-body tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $("#search-box").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#table-body tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
     });
-  });
-});
-</script>
-</head>
+    });
+    </script>
+    </head>
 
-<body>
+    <body>
 
-    <div id="overlay">
-        <img src="./img/preloader.gif" alt="Preloader icon" />
-    </div>
+        <div id="overlay">
+            <img src="./img/preloader.gif" alt="Preloader icon" />
+        </div>
 
-    <main>
+        <main>
 
-        <div id="table-section">
+            <div id="table-section">
 
-            <form action="/">
-                <img src='./img/search-icon.svg' alt="Search Icon" />
-                <input type="text" placeholder="Enter something" name="search-box" id="search-box" value="" />
-            </form>
+                <form action="/">
+                    <img src='./img/search-icon.svg' alt="Search Icon" />
+                    <input type="text" placeholder="Enter something" name="search-box" id="search-box" value="" />
+                </form>
 
-            <div id="table-wrapper">
+                <div id="table-wrapper">
 
-                <div id="table-headers">
-                    <table class="table-th">
-                        <thead class="thead-th">
-                            <tr>
-                                <th class="column1">Id</th>
-                                <th class="column2">FirstName</th>
-                                <th class="column3">LastName</th>
-                                <th class="column4">Email</th>
-                                <th class="column5">Phone</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
+                    <div id="table-headers">
+                        <table class="table-th">
+                            <thead class="thead-th">
+                                <tr>
+                                    <th class="column1">Id</th>
+                                    <th class="column2">FirstName</th>
+                                    <th class="column3">LastName</th>
+                                    <th class="column4">Email</th>
+                                    <th class="column5">Phone</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
 
-<<<<<<< HEAD
-                <div id="table-body"> 
-=======
-                <div id="table-body">
->>>>>>> e06b55b292daf2d8080a73f87fb623c8d18b781b
-                    <table>
-                        <tbody id="table-data">
+                    <div id="table-body">
+                        <table>
+                            <tbody id="table-data">
 
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
 
             </div>
 
-        </div>
 
+            <!-- Details box -->
 
-        <!-- Details box -->
-
-        <div id="info-wrapper">
-            <h1>Details</h1>
-            <p>Click on a table item to get detailed information</p>
-            <div id="info-content">
-                <div><b>User selected:</b> <span id="fetchName"></span></div>
-                <div>
-                    <b>Description: </b>
-                    <textarea cols="50" rows="5" id="fetchDescription" readonly>
-                       </textarea>
+            <div id="info-wrapper">
+                <h1>Details</h1>
+                <p>Click on a table item to get detailed information</p>
+                <div id="info-content">
+                    <div><b>User selected:</b> <span id="fetchName"></span></div>
+                    <div>
+                        <b>Description: </b>
+                        <textarea cols="50" rows="5" id="fetchDescription" readonly>
+                        </textarea>
+                    </div>
+                    <div><b>Address:</b> <span id="fetchAddress"></span></div>
+                    <div><b>City:</b>  <span id="fetchCity"></span></div>
+                    <div><b>State:</b> <span id="fetchState"></span> </div>
+                    <div><b>Zip:</b>  <span id="fetchZip"></span></div>
                 </div>
-                <div><b>Address:</b> <span id="fetchAddress"></span></div>
-                <div><b>City:</b>  <span id="fetchCity"></span></div>
-                <div><b>State:</b> <span id="fetchState"></span> </div>
-                <div><b>Zip:</b>  <span id="fetchZip"></span></div>
             </div>
-        </div>
 
-    </main>
-    <script type="text/javascript" src="./slick/slick/slick.min.js"></script>
-    <script src="./script.js"></script>
-     
-</body>
+        </main>
+        <script type="text/javascript" src="./slick/slick/slick.min.js"></script>
+        <script src="./script.js"></script>
+        
+    </body>
 
-</html>
+    </html>

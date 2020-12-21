@@ -138,11 +138,7 @@ img {
 
 #table-body {
   max-height: 450px;
-<<<<<<< HEAD
-  overflow-y: overlay;
-=======
   overflow-y: scroll;
->>>>>>> e06b55b292daf2d8080a73f87fb623c8d18b781b
 }
 
 @-moz-document url-prefix() {
