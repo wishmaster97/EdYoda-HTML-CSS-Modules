@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-
+/*
   const fName ="Abhijeet";
   //const checkVar = <span> Hi {fName} </span>
   //console.log(checkVar);
@@ -26,7 +26,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  );*/
 }
 
 export default App;
